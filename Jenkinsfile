@@ -15,11 +15,6 @@ pipeline {
 	JENKINS_API_TOKEN = CREDENTIALS("JENKINS_API_TOKEN")
     }
     stages {
-        stage('clean workspace') {
-            steps {
-                cleanWs()
-            }
-        }
         stage('Checkout from Git') {
             steps {
                 git branch: 'main', url: 'https://github.com/binank/a-reddit-clone.git'
